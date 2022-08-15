@@ -95,7 +95,7 @@ def evaluate(func_name, model_name, acqf_name, num_trials, seed, device="cpu", d
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--func_name",
-                        choices=["Ackley", "Branin", "Cosine8", "Rosenbrock"], help="function for evaluation")
+                        choices=["Ackley", "Branin", "Cosine8", "Hartmann", "Rosenbrock"], help="function for evaluation")
     parser.add_argument("--model_name",
                         choices=["GP"], help="choose surrogate model")
     parser.add_argument("--acqf_name",
