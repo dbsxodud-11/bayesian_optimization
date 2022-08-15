@@ -21,8 +21,6 @@ def set_function(func_name, dtype, device):
         return Ackley(negate=True).to(dtype=dtype, device=device)
     elif func_name == "Branin":
         return Branin(negate=True).to(dtype=dtype, device=device)
-    elif func_name == "Cosine8":
-        return Cosine8(negate=True).to(dtype=dtype, device=device)
     elif func_name == "Hartmann":
         return Hartmann(negate=True).to(dtype=dtype, device=device)
     elif func_name == "Rosenbrock":
@@ -95,7 +93,7 @@ def evaluate(func_name, model_name, acqf_name, num_trials, seed, device="cpu", d
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--func_name",
-                        choices=["Ackley", "Branin", "Cosine8", "Hartmann", "Rosenbrock"], help="function for evaluation")
+                        choices=["Ackley", "Branin", "Hartmann", "Rosenbrock"], help="function for evaluation")
     parser.add_argument("--model_name",
                         choices=["GP"], help="choose surrogate model")
     parser.add_argument("--acqf_name",
